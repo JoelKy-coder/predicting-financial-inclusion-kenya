@@ -1,5 +1,8 @@
 # Predicting Financial Exclusion Among Rural Youth in Kenya
-https://github.com/JoelKy-coder/predicting-financial-inclusion-kenya/blob/main/images/jk.png
+
+<p align="center">
+    <img src="images/jk.png" alt="jk" width="600" />
+</p>
 
 ## Project Description
 
@@ -250,11 +253,7 @@ This project is currently licensed under the MIT License.
 
 ## Author
 
-- Name: JoelKy-coder
-- GitHub: https://github.com/JoelKy-coder
-- LinkedIn: Add your profile link
-- Portfolio: Add your portfolio link
-- Email: Add your email address
+- Name: Joel kioko
 
 ## Acknowledgements
 
