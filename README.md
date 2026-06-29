@@ -90,13 +90,73 @@ Generated results are saved to:
 
 - `reports/tables/model_comparison.csv`
 - `reports/tables/training_metadata.json`
+- `reports/tables/feature_importance.csv`
+- `reports/figures/feature_importance.png`
 - `models/best_model.joblib`
 
-Because the raw dataset is not committed, metrics should be regenerated locally after the workbook is added.
+The current committed results were generated from a reproducible 2,000-row sample of the public workbook. After filtering to rural youth aged 18-35, the sample contained 464 respondents: 401 financially included and 63 financially excluded.
+
+| Model | Accuracy | Precision | Recall | F1 Score | ROC AUC |
+|---|---:|---:|---:|---:|---:|
+| Tuned Random Forest | 0.892 | 0.571 | 0.923 | 0.706 | 0.949 |
+| Logistic Regression | 0.892 | 0.579 | 0.846 | 0.688 | 0.938 |
+| Decision Tree | 0.839 | 0.464 | 1.000 | 0.634 | 0.928 |
+| Random Forest | 0.849 | 0.480 | 0.923 | 0.632 | 0.949 |
+| Dummy Baseline | 0.860 | 0.000 | 0.000 | 0.000 | 0.500 |
+
+The tuned Random Forest produced the strongest F1 score in the sample run. F1 is emphasized because the positive class is financial exclusion, and recall matters when the goal is to identify youth who may need targeted support.
+
+## Visualizations
+
+### Feature Importance
+
+The feature-importance chart shows which model inputs contributed most to predicting financial exclusion in the sample run.
+
+![Top model features](reports/figures/feature_importance.png)
+
+The most influential predictors were age, private mobile-phone ownership, digital access score, youth age group, mobile network quality, internet access, app-use confidence, and employment category. These patterns suggest that digital access and life-stage differences are central to understanding exclusion among rural youth.
+
+Additional exploratory visualizations are included in the notebooks:
+
+- `notebooks/03_exploratory_data_analysis.ipynb`: education, digital access, and exclusion-rate charts
+- `notebooks/05_model_development.ipynb`: model training and comparison workflow
+- `notebooks/06_model_evaluation.ipynb`: model evaluation summary
+
+Because the raw dataset is not committed, users should regenerate metrics and notebook outputs locally after placing the official workbook in `data/raw/`.
 
 ## Policy Recommendations
 
-Recommendations should be interpreted from regenerated results. The project is designed to evaluate whether barriers such as limited education, unstable income sources, weak mobile ownership, limited internet access, and geographic location are associated with exclusion.
+The recommendations below are based on the current sample run and should be validated again when the full workbook is processed.
+
+### Government and Regulators
+
+- Expand rural digital infrastructure where mobile network quality and internet access remain weak.
+- Pair financial-inclusion programs with youth digital-literacy training, especially practical use of mobile apps, USSD, and digital public services.
+- Use county-level targeting to prioritize rural areas where exclusion rates remain high after full-data analysis.
+
+### Commercial Banks and Microfinance Institutions
+
+- Design low-cost youth accounts with simple onboarding, low minimum balances, and mobile-first access.
+- Reduce documentation and transaction-cost barriers for rural youth while maintaining responsible KYC controls.
+- Build assisted digital onboarding through agents, schools, youth centers, and local administration offices.
+
+### SACCOs and Community Finance Providers
+
+- Offer youth savings groups and entry-level SACCO products linked to financial education.
+- Use community-based outreach to reach youth with limited private phone access or low confidence using financial apps.
+- Develop products for irregular-income youth, including farmers, casual workers, and self-employed respondents.
+
+### Mobile Money and Digital Finance Providers
+
+- Improve rural agent reliability, network coverage, and customer support for young users.
+- Provide safer, clearer app and USSD experiences for users with low digital confidence.
+- Support affordable feature-phone pathways so inclusion does not depend only on smartphone ownership.
+
+### Development Organizations
+
+- Fund interventions that combine digital access, financial literacy, and livelihood support rather than treating exclusion as only a banking problem.
+- Monitor model performance across gender, education, county, and employment groups to reduce the risk of unequal targeting errors.
+- Evaluate programs with follow-up data so future work can move from association toward stronger causal evidence.
 
 ## Limitations
 
