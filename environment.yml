@@ -1,0 +1,17 @@
+name: financial-inclusion-kenya
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - pandas
+  - numpy
+  - matplotlib
+  - scikit-learn
+  - openpyxl
+  - joblib
+  - nbformat
+  - nbclient
+  - pytest
+  - black
+  - isort
+  - flake8

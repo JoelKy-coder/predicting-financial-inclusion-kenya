@@ -1,0 +1,31 @@
+variable,source_type,description,role
+A08,byte,A8. Cluster type,Predictor
+A18,int,A18. AGE OF RESPONDENT,Predictor
+A20,byte,A20. Education Completed,Predictor
+Access_fnl,byte,Access_fnl,Predictor
+Age,byte,Agegroup of Selected Individual,Predictor
+B3A__1,byte,"B3A. Farming (crops, keeping livestock, fishing, aquaculture)",Predictor
+B3A__10,byte,B3A. Other (Specify),Predictor
+B3A__11,byte,B3A. None of these,Predictor
+B3A__2,byte,B3A. Employed/regular employees,Predictor
+B3A__3,byte,B3A. Casual worker/Seasonal Worker,Predictor
+B3A__4,byte,B3A. Running own business/Self employed,Predictor
+B3A__5,byte,"B3A__5:Money from NGO / Government/Social transfer (e.g pesa ya wazee, inua jami",Predictor
+B3A__6,byte,"B3A. Renting, land, house/rooms, equipment",Predictor
+B3A__7,byte,"B3A. Earning money from investments, e.g. shares, stocks",Predictor
+B3A__8,byte,B3A. Pension/Annuity,Predictor
+B3A__9,byte,B3A. Support from family / friends / spouse/Remittances,Predictor
+B3A__98,byte,B3A. Don't know (DO NOT READ OUT),Predictor
+B3A__99,byte,B3A. Refused to Answer (DO NOT READ OUT),Predictor
+Education,byte,Education Level of Respodent,Predictor
+Overall_Access_fnl,byte,Overall Access fnl,Target
+S1,byte,Statement that best describes your ownership and usage of mobile phone/ tablet s,Predictor
+S2__1,byte,S2._1Can access internet,Predictor
+S6,byte,S6. How would you rate the quality of mobile network coverage in your area?,Predictor
+S7_5,byte,"S7_5. Using Apps to access services eg. Mobile Money, bank app",Predictor
+Sex,byte,Sex of Selected Individual,Predictor
+county,byte,County,Predictor
+formal_access_fnl,byte,Formal access - Overall- Current,Predictor
+indWeight,double,Individual Weights,Predictor
+mobile_money_access,byte,Have ever accessed mobile money,Predictor
+mobile_money_access_primary,byte,Have ever accessed mobile money_own phone,Predictor

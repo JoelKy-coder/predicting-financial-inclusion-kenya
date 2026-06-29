@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.tmp/
+pytest-cache-files-*/
+pytest-of-*/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+venv/
+env/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local data and generated binary artifacts
+data/raw/*
+data/external/*
+data.zip
+*.dta
+*.xlsx
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/external/.gitkeep
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/

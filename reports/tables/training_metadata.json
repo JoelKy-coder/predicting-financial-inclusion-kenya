@@ -1,0 +1,28 @@
+{
+  "sample_size": 2000,
+  "rows_after_rural_youth_filter": 464,
+  "target_distribution": {
+    "0": 401,
+    "1": 63
+  },
+  "best_model": "random_forest_tuned",
+  "best_params": {
+    "model__max_depth": 10,
+    "model__min_samples_leaf": 5,
+    "model__n_estimators": 150
+  },
+  "feature_columns": [
+    "county",
+    "Sex",
+    "Education",
+    "A20",
+    "age_years",
+    "age_group_youth",
+    "employment_category",
+    "internet_access",
+    "owns_private_mobile",
+    "S6",
+    "S7_5",
+    "digital_access_score"
+  ]
+}

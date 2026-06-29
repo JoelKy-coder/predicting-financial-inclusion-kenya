@@ -1,0 +1,83 @@
+feature,importance
+numeric__age_years,0.19678354328474387
+categorical__owns_private_mobile_yes,0.1582618282217972
+categorical__owns_private_mobile_no,0.13989355946435073
+categorical__age_group_youth_18-25,0.10413104557926586
+numeric__digital_access_score,0.10068766348849056
+categorical__age_group_youth_31-35,0.04112458769347221
+categorical__age_group_youth_26-30,0.026363731846517635
+categorical__S6_Strong,0.025714182099938494
+categorical__internet_access_yes,0.024109042114757367
+categorical__internet_access_no,0.02215021722545789
+categorical__S7_5_I have no idea/I dont know,0.017609039192677818
+"categorical__A20_""Some secondary""",0.013979050087834467
+categorical__S7_5_I can manage,0.012473404113190992
+categorical__employment_category_family_remittance,0.01195884575217025
+categorical__employment_category_farming,0.011000988570948719
+categorical__Education_Primary,0.007267862887835691
+"categorical__A20_""Secondary completed """,0.006976450492527404
+categorical__employment_category_casual_work,0.006907366306965797
+categorical__Education_Secondary,0.006795453279593298
+categorical__S6_Okay/Fair/Average,0.00677119242227
+"categorical__A20_""Primary completed""",0.006038079384625115
+categorical__S6_Weak/poor,0.005021807683174252
+categorical__Sex_Female,0.004960930219550504
+categorical__Sex_Male,0.004683646070424858
+categorical__employment_category_self_employment,0.004327765932097773
+categorical__S7_5_I can manage with ease,0.004058201112912438
+categorical__employment_category_regular_employment,0.0036220657771078003
+"categorical__A20_""Some primary """,0.0035545271531901897
+"categorical__A20_""None """,0.0030955969167369784
+categorical__S6_Don't Know,0.00303633773970179
+categorical__A20_Completed technical training after secondary school,0.0028990708744611147
+categorical__county_Turkana,0.0021509483156551064
+categorical__employment_category_other_or_no_income_source,0.001970037529561596
+categorical__S7_5_I can manage with difficulties,0.0018806871077221656
+categorical__Education_Tertiary,0.0017015399312214536
+categorical__county_Migori,0.0014623862087446396
+categorical__county_Nandi,0.0012003997329653705
+categorical__county_Narok,0.0007715956665062127
+categorical__county_Bungoma,0.0005752112388781902
+categorical__county_Elgeyo-Marakwet,0.0003441806433494824
+categorical__county_Meru,0.00029626420271449056
+categorical__county_Nyamira,0.00027568089245576656
+categorical__county_Tana River,0.00024267942114419
+categorical__county_Kirinyaga,0.00022597979139796673
+categorical__county_Bomet,0.00015038664016106507
+categorical__county_Machakos,0.00014251946706676604
+categorical__county_Mandera,0.0001359901137750387
+categorical__county_Uasin Gishu,7.270368206437877e-05
+categorical__county_Kericho,5.070356409470269e-05
+categorical__county_Kakamega,4.976158399741603e-05
+"categorical__A20_""University completed """,4.326127773510251e-05
+categorical__county_Busia,0.0
+categorical__A20_Some university,0.0
+categorical__county_Homabay,0.0
+categorical__county_Baringo,0.0
+categorical__county_Garissa,0.0
+categorical__county_Embu,0.0
+categorical__A20_Some technical training after secondary school,0.0
+categorical__county_Kajiado,0.0
+categorical__county_West Pokot,0.0
+categorical__county_Wajir,0.0
+categorical__county_Vihiga,0.0
+categorical__county_Kiambu,0.0
+categorical__county_Kilifi,0.0
+categorical__county_Kisii,0.0
+categorical__county_Kisumu,0.0
+categorical__county_Kitui,0.0
+categorical__county_Kwale,0.0
+categorical__county_Laikipia,0.0
+categorical__county_Lamu,0.0
+categorical__county_Makueni,0.0
+categorical__county_Marsabit,0.0
+categorical__county_Murang'a,0.0
+categorical__county_Nakuru,0.0
+categorical__county_Nyandarua,0.0
+categorical__county_Nyeri,0.0
+categorical__county_Samburu,0.0
+categorical__county_Siaya,0.0
+categorical__county_Taita-Taveta,0.0
+categorical__county_Tharaka-Nithi,0.0
+categorical__county_Isiolo,0.0
+categorical__county_Trans Nzoia,0.0
