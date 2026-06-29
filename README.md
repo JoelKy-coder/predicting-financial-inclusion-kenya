@@ -1,4 +1,5 @@
 # Predicting Financial Exclusion Among Rural Youth in Kenya
+https://github.com/JoelKy-coder/predicting-financial-inclusion-kenya/blob/main/images/jk.png
 
 ## Project Description
 
