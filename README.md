@@ -75,6 +75,49 @@ Run tests:
 pytest
 ```
 
+## How To Run The Model
+
+1. Install the dependencies listed in `requirements.txt`.
+2. Download `2024_Finaccess_Publicdata.xlsx` from the official FinAccess site and place it in `data/raw/`.
+3. Run the training pipeline:
+
+```bash
+python -m src.train --sample-size 2000
+```
+
+4. Review the saved outputs:
+
+- `models/best_model.joblib`
+- `reports/tables/model_comparison.csv`
+- `reports/tables/feature_importance.csv`
+- `reports/figures/feature_importance.png`
+
+5. Load the saved model for prediction from Python:
+
+```python
+from src.predict import predict_exclusion
+
+profile = {
+    "county": "Kisumu",
+    "Sex": "Female",
+    "Education": "Secondary",
+    "A20": "Secondary completed",
+    "age_years": 24,
+    "age_group_youth": "18-25",
+    "employment_category": "self_employment",
+    "internet_access": "yes",
+    "owns_private_mobile": "yes",
+    "S6": "Strong",
+    "S7_5": "I can manage",
+    "digital_access_score": 3,
+}
+
+prediction = predict_exclusion(profile)
+print(prediction)
+```
+
+The model returns whether the profile is predicted to be financially excluded and the estimated exclusion probability.
+
 ## Machine Learning Workflow
 
 1. Inspect the FinAccess workbook and variable metadata.
