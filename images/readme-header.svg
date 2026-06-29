@@ -1,40 +1,96 @@
 <svg width="1280" height="360" viewBox="0 0 1280 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Predicting Financial Inclusion in Rural Kenya</title>
-  <desc id="desc">A data science banner showing rural landscape, mobile finance, analytics, and financial inclusion themes.</desc>
-  <rect width="1280" height="360" fill="#0E2A2B"/>
-  <path d="M0 238C106 207 205 213 302 235C409 259 493 258 596 229C705 198 798 184 918 216C1033 246 1142 252 1280 221V360H0V238Z" fill="#2F6F4E"/>
-  <path d="M0 286C133 250 250 261 373 287C506 315 615 301 735 269C861 235 978 241 1099 277C1160 295 1223 301 1280 290V360H0V286Z" fill="#74A66A"/>
-  <circle cx="1086" cy="78" r="42" fill="#F7C948"/>
-  <path d="M976 86H1210" stroke="#F7C948" stroke-opacity="0.25" stroke-width="8" stroke-linecap="round"/>
-  <rect x="792" y="78" width="220" height="160" rx="22" fill="#F8FAFC"/>
-  <rect x="812" y="100" width="180" height="92" rx="14" fill="#DFF4EA"/>
-  <rect x="844" y="214" width="116" height="10" rx="5" fill="#0E2A2B" fill-opacity="0.22"/>
-  <path d="M848 163L879 134L912 153L957 113" stroke="#1B6B50" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="879" cy="134" r="9" fill="#F7C948"/>
-  <circle cx="912" cy="153" r="9" fill="#F7C948"/>
-  <circle cx="957" cy="113" r="9" fill="#F7C948"/>
-  <rect x="100" y="74" width="560" height="178" rx="18" fill="#0E2A2B" fill-opacity="0.56"/>
-  <text x="128" y="126" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Predicting Barriers to Financial Inclusion</text>
-  <text x="128" y="172" fill="#DFF4EA" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600">Among Rural Youth in Kenya</text>
-  <text x="128" y="215" fill="#C9D8D5" font-family="Arial, Helvetica, sans-serif" font-size="18">FinAccess 2024 Household Survey  •  Classification  •  Policy Insights</text>
-  <g transform="translate(654 126)">
-    <rect x="0" y="0" width="72" height="118" rx="14" fill="#F8FAFC"/>
-    <rect x="10" y="16" width="52" height="72" rx="8" fill="#1B6B50"/>
-    <circle cx="36" cy="103" r="5" fill="#0E2A2B" fill-opacity="0.4"/>
-    <path d="M22 54H50" stroke="#F7C948" stroke-width="7" stroke-linecap="round"/>
-    <path d="M36 40V68" stroke="#F7C948" stroke-width="7" stroke-linecap="round"/>
+  <desc id="desc">A realistic banner showing a rural Kenyan landscape, a mobile finance scene, and analytics related to financial inclusion.</desc>
+  <defs>
+    <linearGradient id="sky" x1="640" y1="0" x2="640" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#183C4D"/>
+      <stop offset="0.65" stop-color="#2D6A6B"/>
+      <stop offset="1" stop-color="#8CCB7A"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="640" y1="180" x2="640" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4E8A4B"/>
+      <stop offset="1" stop-color="#2F6B3E"/>
+    </linearGradient>
+    <linearGradient id="road" x1="640" y1="130" x2="640" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#C9B28B"/>
+      <stop offset="1" stop-color="#8f724b"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1280" height="360" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="8"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="360" fill="url(#sky)"/>
+  <circle cx="1060" cy="88" r="48" fill="#F4C95D"/>
+  <path d="M0 196C89 166 188 172 276 192C400 220 497 230 648 194C763 170 893 174 1022 212C1113 236 1190 236 1280 207V360H0V196Z" fill="#315C3B" fill-opacity="0.72"/>
+  <path d="M0 238C109 212 240 221 350 248C498 284 609 277 739 247C882 214 1004 220 1280 262V360H0V238Z" fill="#4E8C55" fill-opacity="0.9"/>
+  <path d="M0 282C126 253 239 258 357 284C503 318 640 309 770 276C884 248 1074 247 1280 289V360H0V282Z" fill="url(#ground)"/>
+  <path d="M0 318C205 283 371 292 474 305C629 323 817 320 1001 286C1124 259 1208 259 1280 270V360H0V318Z" fill="#2E603C"/>
+  <path d="M178 276C232 239 321 237 366 269C410 300 475 305 523 283" stroke="#6B4A2A" stroke-width="9" stroke-linecap="round" fill="none"/>
+  <path d="M288 264C345 226 430 223 476 248C521 272 566 276 615 259" stroke="#7D5330" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M714 274C776 241 873 238 934 267C987 293 1044 301 1101 283" stroke="#7D5330" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M0 300C185 252 313 255 435 286C556 317 694 321 805 290C942 251 1062 248 1280 289V360H0V300Z" fill="#A87F4B" fill-opacity="0.22"/>
+
+  <rect x="88" y="72" width="580" height="186" rx="18" fill="#0F2234" fill-opacity="0.62"/>
+  <text x="122" y="120" fill="#F7FAF9" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Predicting Barriers to Financial Inclusion</text>
+  <text x="122" y="162" fill="#DDEEDC" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600">Among Rural Youth in Kenya</text>
+  <text x="122" y="201" fill="#C5D7D0" font-family="Arial, Helvetica, sans-serif" font-size="18">FinAccess 2024 Household Survey  •  Classification  •  Policy Insights</text>
+
+  <g filter="url(#shadow)">
+    <rect x="792" y="84" width="228" height="168" rx="24" fill="#F8FAFC"/>
+    <rect x="814" y="106" width="184" height="104" rx="14" fill="#E7F6EC"/>
+    <path d="M844 162L878 136L910 154L958 114" stroke="#1E6D50" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="878" cy="136" r="8.5" fill="#F3C64A"/>
+    <circle cx="910" cy="154" r="8.5" fill="#F3C64A"/>
+    <circle cx="958" cy="114" r="8.5" fill="#F3C64A"/>
+    <rect x="818" y="228" width="176" height="10" rx="5" fill="#183B39" fill-opacity="0.2"/>
   </g>
-  <g stroke="#F8FAFC" stroke-opacity="0.36" stroke-width="4" stroke-linecap="round">
-    <path d="M744 184C767 180 777 154 800 149"/>
-    <path d="M736 210C774 219 797 243 838 239"/>
-    <path d="M735 157C763 137 782 105 824 102"/>
+
+  <g>
+    <rect x="164" y="228" width="138" height="92" rx="16" fill="#E6C38F"/>
+    <rect x="182" y="242" width="102" height="54" rx="10" fill="#2B5B46"/>
+    <rect x="196" y="256" width="20" height="24" rx="4" fill="#F4C95D"/>
+    <rect x="226" y="256" width="20" height="24" rx="4" fill="#F4C95D"/>
+    <rect x="256" y="256" width="20" height="24" rx="4" fill="#F4C95D"/>
+    <rect x="184" y="214" width="44" height="18" rx="9" fill="#724B2C"/>
+    <path d="M199 214V178" stroke="#724B2C" stroke-width="10" stroke-linecap="round"/>
+    <path d="M165 228L208 196" stroke="#724B2C" stroke-width="8" stroke-linecap="round"/>
+    <path d="M302 228L271 198" stroke="#724B2C" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="233" cy="301" r="8" fill="#4A3322"/>
   </g>
-  <g fill="#0E2A2B" fill-opacity="0.38">
-    <circle cx="226" cy="298" r="13"/>
-    <circle cx="273" cy="285" r="11"/>
-    <circle cx="322" cy="301" r="14"/>
-    <circle cx="1008" cy="300" r="12"/>
-    <circle cx="1052" cy="290" r="10"/>
-    <circle cx="1101" cy="306" r="13"/>
+
+  <g>
+    <ellipse cx="752" cy="298" rx="76" ry="24" fill="#183B39" fill-opacity="0.22"/>
+    <rect x="690" y="228" width="116" height="76" rx="20" fill="#F6E6C8"/>
+    <rect x="710" y="246" width="74" height="42" rx="12" fill="#1E6D50"/>
+    <circle cx="752" cy="267" r="10" fill="#F4C95D"/>
+    <rect x="706" y="204" width="78" height="20" rx="10" fill="#7B4A2C"/>
+    <path d="M748 204V176" stroke="#7B4A2C" stroke-width="10" stroke-linecap="round"/>
+    <path d="M708 204L744 176" stroke="#7B4A2C" stroke-width="8" stroke-linecap="round"/>
+    <path d="M784 204L752 176" stroke="#7B4A2C" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <path d="M558 255C577 243 611 241 631 255C650 268 662 290 653 306C642 327 609 333 585 323C557 311 544 284 558 255Z" fill="#1D4C3D"/>
+    <circle cx="590" cy="236" r="28" fill="#2D4B3A"/>
+    <rect x="560" y="260" width="60" height="52" rx="16" fill="#F8D8A3"/>
+    <rect x="573" y="273" width="34" height="25" rx="6" fill="#1D4C3D"/>
+    <rect x="578" y="225" width="25" height="20" rx="8" fill="#F4C95D"/>
+    <path d="M590 255V303" stroke="#2D4B3A" stroke-width="8" stroke-linecap="round"/>
+    <rect x="612" y="267" width="22" height="18" rx="6" fill="#E8B55E"/>
+  </g>
+
+  <g>
+    <rect x="980" y="244" width="116" height="70" rx="14" fill="#F8FAFC"/>
+    <rect x="995" y="258" width="44" height="16" rx="8" fill="#1E6D50"/>
+    <rect x="1047" y="258" width="34" height="16" rx="8" fill="#F4C95D"/>
+    <rect x="995" y="282" width="86" height="10" rx="5" fill="#D3E7DC"/>
+    <path d="M1008 286L1020 272L1034 278L1052 264" stroke="#1E6D50" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>

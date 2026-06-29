@@ -1,98 +1,138 @@
-# Predicting Barriers to Financial Inclusion Among Rural Youth in Kenya
+# Predicting Financial Exclusion Among Rural Youth in Kenya
 
-![Predicting Barriers to Financial Inclusion Among Rural Youth in Kenya](images/readme-header.svg)
+## Project Description
 
-This repository is an end-to-end machine learning classification case study using the official FinAccess 2024 Household Survey. The project predicts whether rural youth aged 18-35 are financially excluded and translates the analysis into practical recommendations for policymakers and financial-service providers.
+This project develops an end-to-end machine learning workflow to predict whether rural youth in Kenya are likely to be financially excluded. It uses survey data from the FinAccess 2024 Household Survey and combines data preparation, modeling, evaluation, and deployment into a single reproducible project.
 
-## Background
+The work was built to support better decision-making for policymakers, financial institutions, and development organizations that need to identify barriers to financial inclusion. The system is designed to provide a practical starting point for understanding which factors are most associated with exclusion and how those insights can be translated into targeted interventions.
 
-Kenya is a global leader in mobile money and digital financial services, yet exclusion remains an issue for some rural youth. This project uses survey evidence to examine how demographics, education, employment, and digital access relate to exclusion from formal and informal financial services.
+The project includes both a training pipeline and a simple web application so that predictions can be made through Python or a browser-based interface. This makes the solution useful for technical users as well as non-technical stakeholders who want to explore input profiles and review results.
 
 ## Problem Statement
 
-Build a reproducible binary classification workflow that predicts financial exclusion among rural Kenyan youth and identifies the most important barriers associated with exclusion.
+Financial exclusion remains a significant issue for many rural youth in Kenya, even in a market where digital financial services have expanded rapidly. Exclusion can limit access to savings, credit, insurance, and other services that support livelihoods and economic resilience.
 
-Target variable:
+Understanding who is most at risk of exclusion is important for designing effective programs and policies. A predictive model can help identify patterns in the data and support more targeted outreach, product design, and public policy decisions.
 
-- `0`: financially included
-- `1`: financially excluded
+## Project Objectives
 
-The target is created from the survey field `Overall_Access_fnl`, where records marked `excluded` are treated as financially excluded.
+- Build a reproducible classification workflow for predicting financial exclusion
+- Identify the main drivers associated with exclusion among rural youth
+- Provide a user-friendly way to make predictions from a trained model
+- Create a project structure that is easy to understand, extend, and reproduce
+
+## Business Understanding
+
+The solution is intended for organizations that need to understand financial inclusion risk in a practical, data-driven way. By identifying patterns in survey data, the project can support evidence-based planning and help stakeholders focus resources where they are most needed.
+
+The value of the solution lies in its ability to translate complex survey data into clear insights that can inform policy design, outreach campaigns, product development, and program targeting.
 
 ## Dataset
 
-Source: FinAccess Kenya Reports and Datasets  
-https://finaccess.knbs.or.ke/reports-and-datasets
+The project uses the FinAccess 2024 Household Survey dataset.
 
-Expected local file:
+- Data source: FinAccess Kenya survey data
+- Number of observations: Not fixed in the repository; depends on the local dataset used
+- Number of features: Determined by the source workbook
+- Target variable: Financial exclusion status
+- Key input variables: County, sex, education, age, age group, employment category, internet access, mobile ownership, and digital-access-related indicators
+- Data limitations: The raw workbook is large and not committed to the repository
+- Data quality considerations: Missing values, inconsistent labels, and survey-specific encoding may require cleaning and validation
+
+## Project Structure
+
+```text
+project-name/
+├── data/
+│   ├── raw/
+│   └── processed/
+├── notebooks/
+├── src/
+│   ├── data_loader.py
+│   ├── feature_engineering.py
+│   ├── preprocessing.py
+│   ├── train.py
+│   ├── evaluate.py
+│   └── predict.py
+├── models/
+├── reports/
+├── app/
+├── tests/
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
+
+- data/raw: Original survey files and source data
+- data/processed: Cleaned and prepared datasets
+- notebooks: Exploratory analysis and workflow notebooks
+- src: Core training, preprocessing, evaluation, and prediction code
+- models: Saved trained model artifacts
+- reports: Metrics, figures, and output summaries
+- app: Web application entry point and related interface logic
+- tests: Automated tests for validation
+
+## Methodology
+
+The project follows a standard machine learning workflow:
+
+1. Data collection from the FinAccess survey workbook
+2. Data cleaning and validation of survey fields
+3. Exploratory data analysis to understand patterns and data quality
+4. Feature engineering to create interpretable variables for modeling
+5. Data preprocessing for categorical and numeric inputs
+6. Model selection across several candidate classifiers
+7. Model training and evaluation on a held-out test set
+8. Hyperparameter tuning for the strongest model candidate
+9. Model interpretation through feature importance and output analysis
+10. Model saving for reuse in prediction workflows
+11. Deployment of the model through a simple web interface
+
+## Technologies Used
+
+| Category | Technologies |
+|---|---|
+| Programming Language | Python |
+| Data Manipulation | pandas, NumPy |
+| Machine Learning | scikit-learn, joblib |
+| Visualization | matplotlib |
+| Web App | Flask |
+| Testing | pytest |
+| Environment | pip, virtualenv |
+
+## Installation
+
+Clone the repository and install the dependencies.
+
+```bash
+git clone https://github.com/JoelKy-coder/predicting-financial-inclusion-kenya.git
+cd predicting-financial-inclusion-kenya
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+## Usage
+
+### Prepare the data
+
+Place the FinAccess workbook in the expected location:
 
 ```text
 data/raw/2024_Finaccess_Publicdata.xlsx
 ```
 
-The raw workbook is intentionally ignored by Git because it is large. Download it from the official FinAccess site and place it in `data/raw/` before running the pipeline.
-
-## Repository Structure
-
-```text
-.github/workflows/        CI configuration
-data/raw/                 Local raw survey files, ignored by Git
-data/processed/           Reproducible processed outputs
-docs/                     Methodology and project notes
-models/                   Saved model pipeline artifacts
-notebooks/                Guided case-study notebooks
-reports/figures/          Generated visualizations
-reports/tables/           Data dictionaries, metrics, and metadata
-src/                      Reusable Python modules
-tests/                    Pytest suite
-```
-
-## Installation
-
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-python -m pip install -r requirements.txt
-```
-
-## Usage
-
-Train and compare models on a reproducible sample:
+### Train the model
 
 ```bash
 python -m src.train --sample-size 2000
 ```
 
-Run against the full workbook:
+### Evaluate the model
 
-```bash
-python -m src.train --sample-size 0
-```
+The training script generates evaluation metrics and reports under the reports directory.
 
-Run tests:
-
-```bash
-pytest
-```
-
-## How To Run The Model
-
-1. Install the dependencies listed in `requirements.txt`.
-2. Download `2024_Finaccess_Publicdata.xlsx` from the official FinAccess site and place it in `data/raw/`.
-3. Run the training pipeline:
-
-```bash
-python -m src.train --sample-size 2000
-```
-
-4. Review the saved outputs:
-
-- `models/best_model.joblib`
-- `reports/tables/model_comparison.csv`
-- `reports/tables/feature_importance.csv`
-- `reports/figures/feature_importance.png`
-
-5. Load the saved model for prediction from Python:
+### Make predictions
 
 ```python
 from src.predict import predict_exclusion
@@ -112,114 +152,109 @@ profile = {
     "digital_access_score": 3,
 }
 
-prediction = predict_exclusion(profile)
-print(prediction)
+result = predict_exclusion(profile)
+print(result)
 ```
 
-The model returns whether the profile is predicted to be financially excluded and the estimated exclusion probability.
+### Run the application
 
-## Machine Learning Workflow
+```bash
+python app.py
+```
 
-1. Inspect the FinAccess workbook and variable metadata.
-2. Filter to rural respondents aged 18-35.
-3. Create the binary financial-exclusion target.
-4. Engineer interpretable demographic, employment, and digital-access features.
-5. Prevent leakage by excluding direct financial-service access indicators from predictors.
-6. Train baseline, Logistic Regression, Decision Tree, Random Forest, and tuned Random Forest models.
-7. Compare models using accuracy, precision, recall, F1, and ROC AUC.
-8. Save the best model pipeline and reproducible report tables.
+Then open the app in a browser at http://127.0.0.1:5000/.
+
+## Model Evaluation
+
+Model performance is evaluated using accuracy, precision, recall, F1 score, and ROC AUC. These metrics help assess both overall prediction quality and the ability to identify excluded youth correctly.
+
+The current results from the repository are:
+
+| Metric | Score |
+|---|---:|
+| Accuracy | 0.8925 |
+| Precision | 0.5714 |
+| Recall | 0.9231 |
+| F1 Score | 0.7059 |
+| ROC AUC | 0.9490 |
+
+These results indicate that the tuned random forest model performed well for the intended classification task, particularly in identifying the positive class.
 
 ## Results
 
-Generated results are saved to:
+The trained model shows that digital access, age-related factors, and employment context are among the strongest signals associated with financial exclusion in the sample used for this project. The results support the idea that exclusion is not driven by a single factor, but by a mix of socioeconomic and digital-access characteristics.
 
-- `reports/tables/model_comparison.csv`
-- `reports/tables/training_metadata.json`
-- `reports/tables/feature_importance.csv`
-- `reports/figures/feature_importance.png`
-- `models/best_model.joblib`
+The project also produces visual outputs such as feature importance plots and evaluation summaries, which can be reviewed in the reports directory.
 
-The current committed results were generated from a reproducible 2,000-row sample of the public workbook. After filtering to rural youth aged 18-35, the sample contained 464 respondents: 401 financially included and 63 financially excluded.
+## Challenges
 
-| Model | Accuracy | Precision | Recall | F1 Score | ROC AUC |
-|---|---:|---:|---:|---:|---:|
-| Tuned Random Forest | 0.892 | 0.571 | 0.923 | 0.706 | 0.949 |
-| Logistic Regression | 0.892 | 0.579 | 0.846 | 0.688 | 0.938 |
-| Decision Tree | 0.839 | 0.464 | 1.000 | 0.634 | 0.928 |
-| Random Forest | 0.849 | 0.480 | 0.923 | 0.632 | 0.949 |
-| Dummy Baseline | 0.860 | 0.000 | 0.000 | 0.000 | 0.500 |
+Several challenges are common in this type of project:
 
-The tuned Random Forest produced the strongest F1 score in the sample run. F1 is emphasized because the positive class is financial exclusion, and recall matters when the goal is to identify youth who may need targeted support.
+- Missing or inconsistent values in survey data
+- Class imbalance between included and excluded groups
+- Feature engineering based on categorical survey responses
+- Risk of overfitting when working with a relatively small or imbalanced sample
+- The need to avoid leakage from variables that directly describe financial access
 
-## Visualizations
+## Future Improvements
 
-### Feature Importance
+Possible improvements include:
 
-The feature-importance chart shows which model inputs contributed most to predicting financial exclusion in the sample run.
-
-![Top model features](reports/figures/feature_importance.png)
-
-The most influential predictors were age, private mobile-phone ownership, digital access score, youth age group, mobile network quality, internet access, app-use confidence, and employment category. These patterns suggest that digital access and life-stage differences are central to understanding exclusion among rural youth.
-
-Additional exploratory visualizations are included in the notebooks:
-
-- `notebooks/03_exploratory_data_analysis.ipynb`: education, digital access, and exclusion-rate charts
-- `notebooks/05_model_development.ipynb`: model training and comparison workflow
-- `notebooks/06_model_evaluation.ipynb`: model evaluation summary
-
-Because the raw dataset is not committed, users should regenerate metrics and notebook outputs locally after placing the official workbook in `data/raw/`.
+- Adding more data from larger or newer surveys
+- Improving feature engineering and variable selection
+- Exploring additional models and ensemble approaches
+- Adding explainability tools such as SHAP
+- Monitoring model performance after deployment
+- Deploying the application to a cloud platform
+- Adding CI/CD pipelines for automated testing and releases
 
 ## Policy Recommendations
 
-The recommendations below are based on the current sample run and should be validated again when the full workbook is processed.
+The recommendations below are based on the findings of the analysis and are intended to support evidence-based decision-making. They should be interpreted alongside the project's limitations and validated with domain experts before implementation.
 
-### Government and Regulators
+### Government
 
-- Expand rural digital infrastructure where mobile network quality and internet access remain weak.
-- Pair financial-inclusion programs with youth digital-literacy training, especially practical use of mobile apps, USSD, and digital public services.
-- Use county-level targeting to prioritize rural areas where exclusion rates remain high after full-data analysis.
+- Expand financial literacy programs in rural communities where financial exclusion is highest.
+- Invest in digital infrastructure to improve access to mobile and online financial services.
+- Develop policies that encourage financial institutions to serve underserved populations.
 
-### Commercial Banks and Microfinance Institutions
+### Financial Institutions
 
-- Design low-cost youth accounts with simple onboarding, low minimum balances, and mobile-first access.
-- Reduce documentation and transaction-cost barriers for rural youth while maintaining responsible KYC controls.
-- Build assisted digital onboarding through agents, schools, youth centers, and local administration offices.
+- Design affordable financial products tailored to rural youth.
+- Use data-driven approaches to identify communities with low levels of financial inclusion.
+- Strengthen customer education on digital financial services.
 
-### SACCOs and Community Finance Providers
+### Development Partners
 
-- Offer youth savings groups and entry-level SACCO products linked to financial education.
-- Use community-based outreach to reach youth with limited private phone access or low confidence using financial apps.
-- Develop products for irregular-income youth, including farmers, casual workers, and self-employed respondents.
+- Support initiatives that promote financial education and entrepreneurship among young people.
+- Partner with local organizations to improve awareness of available financial services.
 
-### Mobile Money and Digital Finance Providers
+### Future Policy Considerations
 
-- Improve rural agent reliability, network coverage, and customer support for young users.
-- Provide safer, clearer app and USSD experiences for users with low digital confidence.
-- Support affordable feature-phone pathways so inclusion does not depend only on smartphone ownership.
+- Conduct further studies using more recent and region-specific data.
+- Monitor the impact of implemented policies through regular data collection and evaluation.
+- Explore additional socioeconomic factors that may influence financial inclusion.
 
-### Development Organizations
+## Reproducibility
 
-- Fund interventions that combine digital access, financial literacy, and livelihood support rather than treating exclusion as only a banking problem.
-- Monitor model performance across gender, education, county, and employment groups to reduce the risk of unequal targeting errors.
-- Evaluate programs with follow-up data so future work can move from association toward stronger causal evidence.
+To reproduce the project from scratch, follow the installation steps, place the raw survey workbook in the expected data folder, run the training pipeline, and then use the resulting model artifacts for prediction or deployment.
 
-## Limitations
+## Contributing
 
-The analysis is based on cross-sectional survey data, so it identifies associations rather than causal effects. Results also depend on survey measurement quality, missing data patterns, and the representativeness of rural youth responses in the public dataset.
-
-## References
-
-- FinAccess Kenya Reports and Datasets
-- Central Bank of Kenya
-- Kenya National Bureau of Statistics
-- Financial Sector Deepening Kenya
-- Microsoft ML-For-Beginners
-- Scikit-learn, Pandas, NumPy, and Matplotlib documentation
+Contributions are welcome. If you would like to contribute, please open an issue or submit a pull request with a clear description of the proposed changes.
 
 ## License
 
-MIT License
+This project is currently licensed under the MIT License.
 
 ## Author
 
-JoelKy-coder
+- Name: JoelKy-coder
+- GitHub: https://github.com/JoelKy-coder
+- LinkedIn: Add your profile link
+- Portfolio: Add your portfolio link
+- Email: Add your email address
+
+## Acknowledgements
+
+This project makes use of the FinAccess survey data and the open-source Python ecosystem, including pandas, scikit-learn, Flask, and matplotlib.
