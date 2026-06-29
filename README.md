@@ -1,5 +1,7 @@
 # Predicting Barriers to Financial Inclusion Among Rural Youth in Kenya
 
+![Predicting Barriers to Financial Inclusion Among Rural Youth in Kenya](images/readme-header.svg)
+
 This repository is an end-to-end machine learning classification case study using the official FinAccess 2024 Household Survey. The project predicts whether rural youth aged 18-35 are financially excluded and translates the analysis into practical recommendations for policymakers and financial-service providers.
 
 ## Background
